@@ -1,0 +1,646 @@
+@charset "utf-8";
+/* css Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+#homewrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo {
+  width: 400px;
+  max-width:80%;
+  height: auto;
+  margin: 2em;
+  grid-column: 1/4;
+  grid-row: 2;
+  
+}
+
+#title {
+  display: hide;
+  height: 0px;
+  width: 0px;
+  }
+
+#clicker {
+  display: hide;
+}
+
+.navigation{
+  height: 40px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  grid-row: 1;
+  grid-column: 1/4;
+  position:fixed;
+  background-color: #292929;
+  z-index: 29;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0px;
+}
+
+
+.navigation a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 14px 8px 14px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Merriweather', serif;
+}
+
+.navigation a:hover {
+  color: #FFD1DC;
+}
+
+.navigation a.active {
+  color: #85D5Ff;
+}
+
+.navigation a.active:hover {
+  color: #85D5Ff;
+}
+
+.homegrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 3;
+}
+
+.btn {
+  padding: 20px 30px;
+  min-width: 300px;    
+  max-width: 350px;
+  font-size: 40px;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid #292929;
+  outline: none;
+  color: #292929;
+  background-color: transparent;
+  margin: 40px;
+  font-family: 'Merriweather', serif;
+  white-space: nowrap;
+}
+
+.btn--future::after, .btn--future::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #FFD1DC;
+  width: calc(100% + 15px);
+  height: 60px;
+  transition: 0.5s ease;
+}
+
+.btn--future::after {
+  top: -15px;
+  left: -15px;
+  border-right: none;
+  border-bottom: none;
+}
+.btn--future::before {
+  bottom: -15px;
+  right: -15px;
+  border-left: none;
+  border-top: none;
+}
+.btn--future:hover:after, .btn--future:hover:before {
+  width: calc(100% - 30px);
+  height: 80px;
+}
+
+/* button 2 */
+.btn--future2::after, .btn--future2::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #85D5FF;
+  width: calc(100% + 15px);
+  height: 60px;
+  transition: 0.5s ease;
+}
+
+.btn--future2::after {
+  top: -15px;
+  left: -15px;
+  border-right: none;
+  border-bottom: none;
+}
+.btn--future2::before {
+  bottom: -15px;
+  right: -15px;
+  border-left: none;
+  border-top: none;
+}
+.btn--future2:hover:after, .btn--future2:hover:before {
+  width: calc(100% - 30px);
+  height: 80px;
+}
+
+/* Button 3 */
+
+.btn--future3::after, .btn--future3::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #BDECB6;
+  width: calc(100% + 15px);
+  height: 60px;
+  transition: 0.5s ease;
+}
+
+.btn--future3::after {
+  top: -15px;
+  left: -15px;
+  border-right: none;
+  border-bottom: none;
+}
+.btn--future3::before {
+  bottom: -15px;
+  right: -15px;
+  border-left: none;
+  border-top: none;
+}
+.btn--future3:hover:after, .btn--future3:hover:before {
+  width: calc(100% - 30px);
+  height: 80px;
+}
+  
+/* footer */
+
+#footer {
+  width:100%;
+  height:80px;
+  margin-top:50px;
+  background-color: #292929;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 4;
+}
+
+#footer img{
+  height: 70%;
+  grid-column: 1;
+  animation:fly 3s linear infinite;
+}
+
+@keyframes fly{
+  0% {
+    margin-bottom: -2.5px;
+    transform: rotate(-5deg);
+  }
+  20% {
+    margin-bottom: 2.5px;
+    transform: rotate(-10deg);
+  }
+  40% {
+    margin-bottom: -2.5px;
+    transform: rotate(-15deg);
+  }
+  60% {
+    margin-bottom: 2.5px;
+    transform: rotate(-20deg);
+  }
+  80% {
+    margin-bottom: 0px;
+    transform: rotate(-10deg)
+  }
+  100% {
+    margin-bottom: -2.5px;
+    transform: rotate(-5deg);
+  }
+}
+/* Contact */
+
+#contactwrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto;
+  justify-items: center;
+  align-items: center;
+}
+.contactgrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  margin-top: 30px;
+  justify-items: center;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 3;
+}
+
+.contactgrid a {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+.contactgrid img {
+  width: 70%; 
+  transition: all 1.5s; 
+}
+
+.contactgrid img:hover {
+  filter: brightness(0%);
+}
+
+/* Gallery */
+
+#gallerywrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+#galtitle {
+  border-bottom: 5px solid #FFD1DC;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  width:90%;
+  margin-bottom: 30px;
+  grid-column: 1/4;
+  grid-row: 3;
+}
+#miscgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  grid-column: 1/4;
+  grid-row: 4;
+}
+
+#miscgallery img {
+ width: 300px;
+ height: 300px;
+ margin: 20px;
+ transition: all 1s;
+ border-radius: 10px;
+}
+
+#miscgallery img:hover {
+  transform: scale(1.1);
+}
+
+#symtitle {
+  border-bottom: 5px solid #85D5FF;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  width:90%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  grid-column: 1/4;
+  grid-row: 5;
+}
+#sympathy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  grid-column: 1/4;
+  grid-row: 6;
+}
+
+#sympathy img {
+ width: 300px;
+ height: 300px;
+ margin: 20px;
+ transition: all 1s;
+ border-radius: 10px;
+}
+
+#sympathy img:hover {
+  transform: scale(1.1);
+}
+
+#wedtitle {
+  border-bottom: 5px solid #BDECB6;
+  font-family: 'Merriweather', serif;
+  font-size: 3em;
+  width:90%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  grid-column: 1/4;
+  grid-row: 7;
+}
+#wedding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+  grid-column: 1/4;
+  grid-row: 8;
+}
+
+#wedding img {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transition: all 1s;
+  border-radius: 10px;
+}
+
+#wedding img:hover {
+  transform: scale(1.1);
+}
+
+#gallerywrapper #footer {
+  grid-row: 9;
+}
+
+.image p {
+  font-size: 1.5em;
+ text-align: center;
+ font-weight: bold;
+ font-family: 'merriweather';
+}
+
+/* Review */
+
+#reviewwrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.pastreviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin-top: 50px;
+  justify-items: center;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 5/7;
+}
+
+.pastreviews img {
+  width: 60%; 
+}
+
+.reviewgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 30px;
+  justify-items: center;
+  align-items: center;
+  grid-column: 1/4;
+  grid-row: 4;
+}
+
+.reviewgrid a {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  width:100%;
+}
+.reviewgrid img {
+  width: 50%; 
+  transition: all 1.5s; 
+}
+
+.reviewgrid img:hover {
+  filter: brightness(0%);
+}
+
+#reviewwrapper #footer {
+  grid-row: 9;
+}
+
+.reviewtitle {
+  font-size: 2em;
+  text-align: center;
+  grid-column: 1/4;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Merriweather', serif;
+  grid-row: 3;
+}
+
+/* Find Us */
+
+#findwrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+#findwrapper iframe{
+  grid-column: 1/4;
+  margin-top: 20px;
+}
+
+
+/* about us */
+
+#aboutwrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.aboutustext {
+  width: 80%;
+  grid-column: 1/4;
+  grid-row: 4;
+}
+
+#aboutwrapper #footer {
+  grid-row: 5;
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  /* nav */
+  #title {
+    background-color: #292929;
+    width:100%;
+    height: 40px;
+    grid-column: 1/4;
+    grid-row: 1;
+    display: grid;
+    position:fixed;
+    grid-template-columns: auto;
+    grid-template-rows: 45px;
+    justify-items: left;
+    align-items: center;
+    z-index: 30;
+    }
+  
+  #clicker {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Merriweather', serif;
+    padding: 0px 0px 0px 10px;
+    z-index: 30;
+    cursor: pointer;
+  }
+  
+  .navigation{
+    height: 100%;
+    width: 60%;
+    top: 0;
+    left: -60%;
+    position: fixed;
+    background-color: #292929;
+    z-index: 29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 10px;
+    }
+  .ease {
+    transition: left ease-in-out 0.75s;}
+  .closed {
+    height: 100%;
+    width: 60%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #292929;
+    z-index: 29;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+  
+  .navigation a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 14px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .navigation a:hover {
+    color: #FFD1DC;
+  }
+  
+  .navigation a.active {
+    color: #85D5Ff;
+  }
+  
+  .navigation a.active:hover {
+    color: #85D5Ff;
+  }
+
+  /* review */
+  .reviewtitle {
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .reviewgrid img {
+    width: 80%;  
+  }
+  .pastreviews img {
+    width: 90%; 
+  }
+
+  /* findus */
+  #findwrapper iframe{
+    max-height: 300px;
+    grid-column: 1/4;
+    grid-row: 3;
+  }
+
+  #findwrapper {
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    min-height: 100%;
+  }
+
+  html { 
+    min-height: 100%;
+  }
+
+  #findwrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
+    justify-items: center;
+  }
+
+  #findwrapper #footer {
+      align-self: end;
+  }
+ 
+
+  /* contact */
+  .contactgrid img {
+    width: 70%; 
+     padding: 20px;
+  }
+
+  .contactgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin-top: 30px;
+    justify-items: center;
+    align-items: center;
+    grid-column: 1/4;
+    grid-row: 3;
+  }
+}
