@@ -32,6 +32,7 @@ body {
   grid-template-rows: 40px auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .logo {
@@ -211,6 +212,7 @@ body {
   align-items: center;
   grid-column: 1/4;
   grid-row: 4;
+  align-self: end;
 }
 
 #footer img{
@@ -253,6 +255,7 @@ body {
   grid-template-rows: 40px auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 .contactgrid {
   display: grid;
@@ -289,6 +292,7 @@ body {
   grid-template-rows: 40px auto auto auto auto auto auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 #galtitle {
@@ -405,6 +409,7 @@ body {
   grid-template-rows: 40px auto auto auto auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .pastreviews {
@@ -472,6 +477,7 @@ body {
   grid-template-rows: 40px auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 #findwrapper iframe{
@@ -485,9 +491,10 @@ body {
 #aboutwrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 40px auto auto auto auto auto;
+  grid-template-rows: 40px auto auto auto auto;
   justify-items: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .aboutustext {
@@ -579,6 +586,14 @@ body {
     color: #85D5Ff;
   }
 
+  /* buttons */
+
+  .btn {
+    min-width: 250px;    
+    max-width: 250px;
+    font-size: xx-large;
+  }
+  
   /* review */
   .reviewtitle {
     font-size: 1.5em;
